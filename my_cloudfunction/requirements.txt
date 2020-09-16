@@ -1,0 +1,4 @@
+numpy<1.19.0,>=1.16.0
+image>=1.5.32
+tensorflow>=2.3.0
+google-cloud-storage>=1.18.1
