@@ -6,6 +6,8 @@ I made this app using the [Hosting Projects tutorial](https://colab.research.goo
 
 ## Instructions: Initialization
 
+Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) if you don't already have it.
+
 Clone the repository locally:
 
 `git clone https://github.com/loafterew/my_gcloud_app.git`
@@ -17,10 +19,10 @@ Go into repository:
 Define these variables:
 
 ```
-PROJECT_NAME = 'ds-web-app'
-BUCKET_NAME = 'ds-app-bucket'
-CLOUDFUNCTION_NAME = 'image_classifier'
-ENTRY_POINT = 'classify_image'
+PROJECT_NAME='ds-web-app'
+BUCKET_NAME='ds-app-bucket'
+CLOUDFUNCTION_NAME='image_classifier'
+ENTRY_POINT='classify_image'
 ```
 
 ### Create Project
