@@ -6,7 +6,9 @@ I made this app using the [Hosting Projects tutorial](https://colab.research.goo
 
 ## Instructions: Initialization
 
-Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) if you don't already have it.
+Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) if you don't already have it:
+
+`brew cask install google-cloud-sdk`
 
 Clone the repository locally:
 
@@ -84,7 +86,7 @@ Go back to parent directory:
 Create and activate a python virtual environment:
 
 ```
-python -m venv env
+python3 -m venv env
 source env/bin/activate
 ```
 
@@ -102,6 +104,10 @@ gcloud projects add-iam-policy-binding $PROJECT_NAME --member "serviceAccount:de
 Create key for local web app to access Google Storage:
 
 `gcloud iam service-accounts keys create key.json --iam-account dev-account@$PROJECT_NAME.iam.gserviceaccount.com`
+
+Export `GOOGLE_APPLICATION_CREDENTIALS` variable:
+
+`export GOOGLE_APPLICATION_CREDENTIALS=key.json`
 
 Install dependencies and run app:
 
