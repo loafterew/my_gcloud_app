@@ -1,10 +1,10 @@
-#My Google Cloud App
+# My Google Cloud App
 
 Hello, this is my Google Cloud App!
 
 I made this app using the [Hosting Projects tutorial](https://colab.research.google.com/drive/1UsbTlPc5oB8sIwHRfmajOGf9z7E0CobT?usp=sharing) from Div's Data Science Course!
 
-##Instructions: Initialization
+## Instructions: Initialization
 
 Clone the repository locally:
 
@@ -23,7 +23,7 @@ CLOUDFUNCTION_NAME = 'image_classifier'
 ENTRY_POINT = 'classify_image'
 ```
 
-###Create Project
+### Create Project
 
 Log into Google Cloud Platform:
 
@@ -41,7 +41,13 @@ Create the project if it doesn't exist:
 
 `gcloud app create`
 
-###Create Storage Bucket
+If you haven't already, you will have to [enable billing](https://console.cloud.google.com/billing) and enter payment information.
+
+Enable the Cloud Build API:
+
+`gcloud services enable cloudbuild.googleapis.com`
+
+### Create Storage Bucket
 
 Create the bucket if it doesn't exist:
 
@@ -51,7 +57,7 @@ Make the bucket's contents public:
 
 `gsutil iam ch allUsers:objectViewer gs://$BUCKET_NAME`
 
-###Create Cloud Function
+### Create Cloud Function
 
 Go into the my_cloudfunction directory:
 
@@ -71,7 +77,7 @@ Go back to parent directory:
 
 `cd ..`
 
-##Instructions: Test Web App Locally
+## Instructions: Test Web App Locally
 
 Create and activate a python virtual environment:
 
@@ -102,7 +108,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-##Instructions: Deploy Web App Google Cloud
+## Instructions: Deploy Web App Google Cloud
 
 go into my_app_v3 directory:
 
